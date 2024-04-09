@@ -1,9 +1,13 @@
 import React from "react";
+import "./tailwind.css";
+
+import TicTacToe from "./components/tictactoe";
 
 function App() {
   return (
     <>
-      <h1>Welcome!</h1>
+      <TicTacToe />
+      <div className="bg-red-500">Just a normal div</div>
     </>
   );
 }
