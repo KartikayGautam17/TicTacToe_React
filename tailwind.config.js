@@ -6,7 +6,11 @@ module.exports = {
     "./src/components/*.{html,js,jsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        font_awe: "Bahnschrift",
+      },
+    },
   },
   plugins: [],
 };
