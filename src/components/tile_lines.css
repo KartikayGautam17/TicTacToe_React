@@ -10,3 +10,52 @@
 .br {
   border-right-width: 2px;
 }
+.strike {
+  position: absolute;
+  background-color: darkorange;
+}
+.strike-col-l {
+  height: 100%;
+  left: 16%;
+  width: 5px;
+}
+
+.strike-col-m {
+  height: 100%;
+  left: 49%;
+  width: 5px;
+}
+.strike-col-r {
+  height: 100%;
+  left: 82.5%;
+  width: 5px;
+}
+.strike-row-t {
+  width: 100%;
+  height: 5px;
+  top: 15%;
+}
+.strike-row-m {
+  width: 100%;
+  height: 5px;
+  top: 48%;
+}
+.strike-row-b {
+  width: 100%;
+  height: 5px;
+  top: 82.5%;
+}
+.strike-dia-l {
+  transform: skewY(calc(33deg));
+  top: 48.5%;
+  width: 100%;
+  height: 5px;
+  left: 0;
+}
+.strike-dia-r {
+  transform: skewY(calc(-33deg));
+  top: 48.5%;
+  width: 100%;
+  height: 5px;
+  right: 0;
+}

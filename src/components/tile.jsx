@@ -3,12 +3,16 @@ import "./tile_lines.css";
 function Tile(props) {
   return (
     <div
+      after={props.val ? "" : props.playerTurn}
+      onClick={() => props.onClick}
       className={
         props.border +
-        "flex justify-center items-center border-solid border-yellow-400 hover:bg-yellow-400 cursor-pointer duration-300 "
+        "text-3xl flex justify-center items-center border-blue-500 border-solid cursor-pointer duration-0 hover:opacity-" +
+        (props.val ? 0 : 40) +
+        " hover:after:content-[attr(after)]"
       }
     >
-      Tiles
+      {props.val}
     </div>
   );
 }
