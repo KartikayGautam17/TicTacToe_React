@@ -1,6 +1,7 @@
 import Board from "./board";
 import GameOver from "./GameOver";
 import gameState from "./gameState";
+import ResetGame from "./ResetGame";
 
 import { useState, useEffect } from "react";
 
@@ -48,9 +49,6 @@ function TicTacToe() {
   useEffect(() => {
     WinCheck(tile_values, set_strikeCombo, setGameState, GameState);
   }, [tile_values]);
-  const Working = (chad) => {
-    return chad;
-  };
   const HandleTileClick = (index) => {
     if (tile_values[index]) return;
     const newTiles = [...tile_values];
@@ -61,7 +59,12 @@ function TicTacToe() {
       else return Player_X;
     });
   };
-
+  const HandleReset = () => {
+    setGameState(gameState.inProgress);
+    set_tile_val(Array(9).fill(null));
+    set_strikeCombo(null);
+    setPlayerTurn(Player_X);
+  };
   return (
     <>
       <div className="font-font_awe w-full h-screen overflow-hidden">
@@ -72,10 +75,12 @@ function TicTacToe() {
           <Board
             playerTurn={playerTurn}
             tile_val={tile_values}
-            onTileClick={Working}
+            onTileClick={HandleTileClick}
             strike_combo={strikeCombo}
+            game_state={GameState}
           />
           <GameOver game_State={GameState} />
+          <ResetGame game_State={GameState} onReset={HandleReset} />
         </div>
       </div>
     </>

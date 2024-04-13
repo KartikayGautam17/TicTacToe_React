@@ -4,10 +4,10 @@ function Tile(props) {
   return (
     <div
       after={props.val ? "" : props.playerTurn}
-      onClick={() => props.onClick}
+      onClick={props.onClick}
       className={
         props.border +
-        "text-3xl flex justify-center items-center border-blue-500 border-solid cursor-pointer duration-0 hover:opacity-" +
+        "text-3xl flex justify-center items-center border-blue-500 border-solid cursor-pointer duration-1000 hover:opacity-" +
         (props.val ? 0 : 40) +
         " hover:after:content-[attr(after)]"
       }

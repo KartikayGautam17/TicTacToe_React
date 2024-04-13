@@ -16,18 +16,18 @@
 }
 .strike-col-l {
   height: 100%;
-  left: 16%;
+  left: 16.33%;
   width: 5px;
 }
 
 .strike-col-m {
   height: 100%;
-  left: 49%;
+  left: 49.66%;
   width: 5px;
 }
 .strike-col-r {
   height: 100%;
-  left: 82.5%;
+  left: 83%;
   width: 5px;
 }
 .strike-row-t {
@@ -46,15 +46,15 @@
   top: 82.5%;
 }
 .strike-dia-l {
-  transform: skewY(calc(33deg));
-  top: 48.5%;
+  transform: skewY(calc(18deg));
+  top: 49%;
   width: 100%;
   height: 5px;
   left: 0;
 }
 .strike-dia-r {
-  transform: skewY(calc(-33deg));
-  top: 48.5%;
+  transform: skewY(calc(-18deg));
+  top: 49%;
   width: 100%;
   height: 5px;
   right: 0;
